@@ -1,6 +1,6 @@
 import './App.css';
 import Rotas from "./componentes/Rotas";
-function App() { // teste
+function App() { 
   return (
     <div>
       <Rotas/>
