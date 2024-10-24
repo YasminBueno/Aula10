@@ -2,3 +2,27 @@ body{
   margin: 0px;
   padding: 0px;
 }
+
+header{
+  margin: 0px;
+  padding: 0px 20px;
+  height: 100px;
+  background-color: rgb(134, 8, 8);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+header a:hover{
+  text-decoration: underline;
+}
+header a + a{
+  margin-left: 20px;
+}
