@@ -11,7 +11,7 @@ const db = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: '',
+    password: 'mysqlfatec',
     database: 'aulabd'
 })
 
@@ -23,6 +23,12 @@ db.connect((erro) => {
     }
 });
 
-app.post('/alunos', (req,res) => {
+app.post('/alunos', (req, res) => {
+    const {nome,cidade,estado} = req.body;
+    
+    const sql = 'INSERT INTO alunos (nome,cidade,estado) VALUES (?,?,?)';
 
+    db.query(sql, [nome,cidade,estado], (err,result) =>{
+
+    });
 });
