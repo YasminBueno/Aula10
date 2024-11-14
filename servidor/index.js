@@ -35,8 +35,9 @@ app.post('/alunos', (req, res) => {
         res.status(201).json({message: 'Aluno cadastrado com sucesso!', id: result.insertId});
     });
 
-    app.listen(PORT, () => {
-        console.log(`Servidor rodando em http://localhost:${PORT}`); 
-    });
+   
+}); 
 
+app.listen(PORT, () => {
+        console.log(`Servidor rodando em http://localhost:${PORT}`); 
 });
