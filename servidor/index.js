@@ -29,6 +29,10 @@ app.post('/alunos', (req, res) => {
     const sql = 'INSERT INTO alunos (nome,cidade,estado) VALUES (?,?,?)';
 
     db.query(sql, [nome,cidade,estado], (err,result) =>{
-
+        if(err){
+            return res.status(500).json({error: 'Erro ao cadastrar aluno!'});
+        }
+        res.status(201).json({message: 'Aluno cadastrado com sucesso!', id: result.insertId});
     });
+    
 });
