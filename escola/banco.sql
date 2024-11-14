@@ -9,4 +9,4 @@ create table alunos(
     estado varchar(2)
 );
 
-use alunos; 
+select * from alunos; 
